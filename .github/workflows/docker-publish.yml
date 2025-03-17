@@ -32,7 +32,7 @@ jobs:
       - name: Build and push to GHCR
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./Dev
           file: ./Dev/Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository }}/my-app:latest
