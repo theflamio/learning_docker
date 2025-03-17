@@ -3,10 +3,10 @@ name: Build and Publish Docker Image to GHCR
 on:
   push:
     branches:
-      - master
+      - master  # Make sure this is the correct branch name (or change to 'main' if that's your default)
   pull_request:
     branches:
-      - master
+      - master  # Same for pull_request
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
       - name: Build and push to GHCR
         uses: docker/build-push-action@v4
         with:
-          context: ./Dev
-          file: ./Dev/Dockerfile
+          context: ./Dev  # The folder where your Dockerfile and related files are located
+          file: ./Dev/Dockerfile  # Path to your Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}/my-app:latest
+          tags: ghcr.io/${{ github.repository }}/my-app:latest  # Make sure this tag is formatted correctly
