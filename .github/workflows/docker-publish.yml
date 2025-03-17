@@ -27,6 +27,7 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_TOKEN }}
+          registry: ghcr.io
 
       # Step 4: Build and Push Docker Image to GHCR
       - name: Build and push to GHCR
