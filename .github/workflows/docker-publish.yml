@@ -36,4 +36,4 @@ jobs:
           context: ./Dev  # The folder where your Dockerfile and related files are located
           file: ./Dev/Dockerfile  # Path to your Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository | toLowerCase()}}/my-app:latest  # Make sure this tag is formatted correctly
+          tags: ghcr.io/${{ github.repository }}/my-app:latest  # Make sure this tag is formatted correctly
