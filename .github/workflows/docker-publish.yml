@@ -35,6 +35,4 @@ jobs:
           context: .
           file: ./Dev/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}/my-app:latest/Dockerfile
-          push: true
           tags: ghcr.io/${{ github.repository }}/my-app:latest
